@@ -1,0 +1,21 @@
+# Perfil de produccion: datos de conexion por variables de entorno, sin crear tablas
+server:
+  port: ${PORT:8092}
+
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/bd_equipo?serverTimezone=America/Lima}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+
+servicios:
+  cliente:
+    url: ${CLIENTE_URL:http://localhost:8091}
+logging:
+  level:
+    root: WARN
+    com.tecsup: INFO
