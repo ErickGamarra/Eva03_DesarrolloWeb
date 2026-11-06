@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" font-family="Inter, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker>
+    <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#b23b3b"/></marker>
+  </defs>
+  <rect width="1600" height="980" fill="#fff"/>
+  <text x="800" y="58" text-anchor="middle" font-size="32" font-weight="600" fill="#1f2a3a">Gestión de mantenimiento de equipos — Microservicios</text>
+
+  <!-- Postman -->
+  <rect x="40" y="430" width="210" height="90" rx="14" fill="#fff4e0" stroke="#c47f00" stroke-width="2"/>
+  <text x="145" y="468" text-anchor="middle" font-size="22" font-weight="600">Postman</text>
+  <text x="145" y="498" text-anchor="middle" font-size="18" fill="#444">(pruebas HTTP)</text>
+
+  <!-- servicios: x=480 w=520 ; bd x=1180 -->
+  <g font-size="19">
+    <!-- cliente -->
+    <rect x="470" y="110" width="1090" height="210" rx="16" fill="none" stroke="#3b5b8c" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <text x="490" y="140" font-size="18" fill="#3b5b8c" font-weight="600">cliente-service · puerto 8091</text>
+    <rect x="490" y="158" width="500" height="140" rx="14" fill="#e8f0fb" stroke="#3b5b8c" stroke-width="2"/>
+    <text x="740" y="196" text-anchor="middle" font-weight="600">CRUD de clientes · /api/clientes</text>
+    <text x="740" y="230" text-anchor="middle" fill="#333">documento, nombres, teléfono,</text>
+    <text x="740" y="258" text-anchor="middle" fill="#333">correo, dirección</text>
+
+    <!-- equipo -->
+    <rect x="470" y="380" width="1090" height="210" rx="16" fill="none" stroke="#3b5b8c" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <text x="490" y="410" font-size="18" fill="#3b5b8c" font-weight="600">equipo-service · puerto 8092</text>
+    <rect x="490" y="428" width="500" height="140" rx="14" fill="#e8f0fb" stroke="#3b5b8c" stroke-width="2"/>
+    <text x="740" y="466" text-anchor="middle" font-weight="600">CRUD de equipos · /api/equipos</text>
+    <text x="740" y="500" text-anchor="middle" fill="#333">código, tipo, marca, modelo,</text>
+    <text x="740" y="528" text-anchor="middle" fill="#333">idCliente (referencia por ID)</text>
+
+    <!-- orden -->
+    <rect x="470" y="650" width="1090" height="230" rx="16" fill="none" stroke="#3b5b8c" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <text x="490" y="680" font-size="18" fill="#3b5b8c" font-weight="600">orden-servicio-service · puerto 8093</text>
+    <rect x="490" y="698" width="500" height="160" rx="14" fill="#e8f0fb" stroke="#3b5b8c" stroke-width="2"/>
+    <text x="740" y="734" text-anchor="middle" font-weight="600">Órdenes de servicio · /api/ordenes</text>
+    <text x="740" y="766" text-anchor="middle" fill="#333">idEquipo, fecha de ingreso, descripción,</text>
+    <text x="740" y="794" text-anchor="middle" fill="#333">costo estimado y estado:</text>
+    <text x="740" y="826" text-anchor="middle" fill="#7a3b00" font-size="17">RECIBIDO → EN_REPARACION → LISTO → ENTREGADO</text>
+  </g>
+
+  <!-- bases -->
+  <g font-size="19" text-anchor="middle">
+    <g transform="translate(1250,170)"><ellipse cx="120" cy="0" rx="120" ry="18" fill="#e9f6ec" stroke="#2e7d32" stroke-width="2"/><path d="M0,0 v90 a120,18 0 0 0 240,0 v-90" fill="#e9f6ec" stroke="#2e7d32" stroke-width="2"/><ellipse cx="120" cy="0" rx="120" ry="18" fill="#e9f6ec" stroke="#2e7d32" stroke-width="2"/><text x="120" y="48" font-weight="600">bd_cliente_mant</text><text x="120" y="76" fill="#333">tabla cliente</text></g>
+    <g transform="translate(1250,440)"><path d="M0,0 v90 a120,18 0 0 0 240,0 v-90" fill="#e9f6ec" stroke="#2e7d32" stroke-width="2"/><ellipse cx="120" cy="0" rx="120" ry="18" fill="#e9f6ec" stroke="#2e7d32" stroke-width="2"/><text x="120" y="48" font-weight="600">bd_equipo</text><text x="120" y="76" fill="#333">tabla equipo</text></g>
+    <g transform="translate(1250,720)"><path d="M0,0 v90 a120,18 0 0 0 240,0 v-90" fill="#e9f6ec" stroke="#2e7d32" stroke-width="2"/><ellipse cx="120" cy="0" rx="120" ry="18" fill="#e9f6ec" stroke="#2e7d32" stroke-width="2"/><text x="120" y="48" font-weight="600">bd_orden_servicio</text><text x="120" y="76" fill="#333">tabla orden_servicio</text></g>
+  </g>
+
+  <!-- JPA -->
+  <g stroke="#555" stroke-width="2" marker-end="url(#a)"><line x1="990" y1="228" x2="1245" y2="228"/><line x1="990" y1="498" x2="1245" y2="498"/><line x1="990" y1="778" x2="1245" y2="778"/></g>
+  <g font-size="17" fill="#555" text-anchor="middle"><text x="1118" y="216">JPA / MySQL</text><text x="1118" y="486">JPA / MySQL</text><text x="1118" y="766">JPA / MySQL</text></g>
+
+  <!-- Postman a servicios -->
+  <g stroke="#555" stroke-width="2" fill="none" marker-end="url(#a)">
+    <path d="M250,455 C360,420 380,240 486,228"/><path d="M250,475 L486,490"/><path d="M250,495 C360,540 380,770 486,778"/>
+  </g>
+
+  <!-- comunicación entre servicios -->
+  <g stroke="#b23b3b" stroke-width="2.4" stroke-dasharray="8 6" marker-end="url(#r)" fill="none">
+    <line x1="900" y1="426" x2="900" y2="302"/><line x1="900" y1="696" x2="900" y2="572"/>
+  </g>
+  <g font-size="16" fill="#b23b3b">
+    <text x="912" y="352">GET /api/clientes/{id}</text><text x="912" y="372">valida que el cliente exista</text>
+    <text x="912" y="622">GET /api/equipos/{id}</text><text x="912" y="642">valida que el equipo exista</text>
+  </g>
+  <text x="800" y="940" text-anchor="middle" font-size="17" fill="#555">Cada servicio tiene su propia base de datos; las relaciones entre servicios se guardan solo como IDs y se validan por HTTP (RestClient).</text>
+</svg>
