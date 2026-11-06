@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.tecsup</groupId>
+    <artifactId>mantenimiento-equipos</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>mantenimiento-equipos</name>
+
+    <!-- Solo agrupa los tres microservicios para abrirlos juntos; cada uno sigue siendo independiente -->
+    <modules>
+        <module>cliente-service</module>
+        <module>equipo-service</module>
+        <module>orden-servicio-service</module>
+    </modules>
+</project>
